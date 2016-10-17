@@ -1,5 +1,10 @@
 # jQueryPlugin
 一个jQuery插件集合, 包括回到顶部插件, 懒加载插件, 轮播插件, stickUp插件, 瀑布流布局插件
+## install
+```
+npm install gqc-plugin
+```
+
 ## backTop
 [Demo](https://guoqichen.github.io/jQueryPlugin/demo/backTop/)
 ### 简介
