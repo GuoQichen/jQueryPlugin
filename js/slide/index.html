@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>practice</title>
+    <style>
+
+        body {
+            background-color: #E6E6E6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .viewport {
+            position: relative;
+            width: 1080px;
+            height: 432px;
+            overflow: hidden;
+        }
+
+        .slide-wrapper {
+            display: inline-block;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+        .slide {
+            position: absolute;
+        }
+
+        .slide > li {
+            float: left;
+        }
+
+        .slide a {
+            display: block;
+            width: 1080px;
+            height: 432px;
+        }
+
+        .slide img {
+            width: 100%;
+            vertical-align: bottom;
+        }
+
+        /*button样式*/
+        .slide-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 50px 30px;
+            color: #fff;
+            font-size: 2em;
+            background-color: rgba(0,0,0,0.1);
+            transition: all 1s;
+        }
+
+        .slide-btn:hover {
+            padding: 50px 40px;
+            background-color: #31C27C;
+        }
+
+        .btn-prev {
+            left: -15%;
+        }
+
+        .btn-next {
+            right: -15%;
+        }
+
+        .btn-bullet {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .bullet-item {
+            float: left;
+            padding: 10px 0;
+            margin: 5px;
+        }
+
+        .bullet-item:hover {
+            cursor: pointer;
+        }
+
+        .item-contain {
+            width: 30px;
+            height: 2px;
+            background-color: rgba(21,21,21,0.3);
+        }
+
+        .selected > .item-contain {
+            background-color: #000;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="slide-wrapper">
+        <div class="viewport">
+            <ul class="slide">
+                <li class="slide-item"><a href="#!"><img src="img/1.jpg" alt=""></a></li>
+                <li class="slide-item"><a href="#!"><img src="img/2.jpg" alt=""></a></li>
+                <li class="slide-item"><a href="#!"><img src="img/3.jpg" alt=""></a></li>
+                <li class="slide-item"><a href="#!"><img src="img/4.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <a href="#!" class="slide-btn btn-prev">&lt;</a>
+        <a href="#!" class="slide-btn btn-next">&gt;</a>
+        <ul class="btn-bullet">
+            <li class="bullet-item selected"><div class="item-contain"></div></li>
+            <li class="bullet-item"><div class="item-contain"></div></li>
+            <li class="bullet-item"><div class="item-contain"></div></li>
+            <li class="bullet-item"><div class="item-contain"></div></li>
+        </ul>
+    </div>
+    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+    <script src="slide.js"></script>
+    <script>
+        $('.slide-wrapper').slide()
+    </script>
+</body>
+</html>

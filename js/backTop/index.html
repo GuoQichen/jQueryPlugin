@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>backTop Demo</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .holder {
+            width: 200px;
+            height: 200px;
+            margin: 10px auto;
+            padding: 20px;
+            color: #fff;
+            font-size: 2em;
+            background-color: #00BCD4;
+        }
+
+        .backtop {
+            display: none;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            padding: 20px;
+            color: #fff;
+            background-color: rgba(0,0,0,0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="holder">Holder</div>
+    <div class="holder">Holder</div>
+    <div class="holder">Holder</div>
+    <div class="holder">Holder</div>
+    <div class="holder">Holder</div>
+    <div class="holder">Holder</div>
+    <div class="holder">Holder</div>
+    <div class="holder">Holder</div>
+    <div class="holder">Holder</div>
+    <div class="holder">Holder</div>
+    <a href="#!" class="backtop">Top</a>
+    <script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.js"></script>
+    <script src="backTop.js"></script>
+    <script>
+        $('.backtop').backTop(200)
+    </script>
+</body>
+</html>
