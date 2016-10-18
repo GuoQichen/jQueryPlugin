@@ -4,7 +4,12 @@ function BackTop($target, top) {
     this.$target = $target
     this.top = top
     this.timer = 0
+    this.init()
     this.bindEvent()
+}
+
+BackTop.prototype.init = function() {
+    this.$target.hide()
 }
 
 BackTop.prototype.bindEvent = function() {
